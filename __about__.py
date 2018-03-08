@@ -1,5 +1,5 @@
 __title__ = 'Flask-Language'
-__version__ = '0.1.0'
+__version__ = '0.0.0'
 __description__ = 'Flask extension handling client-side language cookie'
 __author__ = 'Romain Clement'
 __author_email__ = 'r.clement88@gmail.com'
