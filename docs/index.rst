@@ -35,7 +35,7 @@ Or with pip_:
 Usage
 -----
 
-Initialize the Flask-Language extension:
+Initialize the Flask-Language extension (also compatible with the `Application Factories`_ pattern):
 
 ::
 
@@ -82,24 +82,26 @@ Before each request, Flask-Language will automatically determine the current
 language in the following order:
 
 1. The language cookie (if any and matching the allowed languages)
-2. The `Accept-Language` HTTP header (if any and matching the allowed languages)
+2. The ``Accept-Language`` HTTP header (if any and matching the allowed languages)
 3. The provided default language
 
 During each request context, the current language can be accessed using
-`current_language`.
+``current_language``.
 
 After each request, the current language will be stored in the language cookie.
+
+.. _Application Factories: http://flask.pocoo.org/docs/0.12/patterns/appfactories/
 
 Configuration
 -------------
 
 Flask-Language is configurable via the following configuration variables:
 
-- `LANGUAGE_COOKIE_NAME`: name for the cookie language (default: 'lang')
-- `LANGUAGE_COOKIE_TIMEOUT`: validity duration of the cookie language (default: 365 days)
-- `LANGUAGE_COOKIE_DOMAIN`: domain for the cookie language (default: None)
-- `LANGUAGE_COOKIE_SECURE`: set secure option for the cookie language (default: False)
-- `LANGUAGE_COOKIE_HTTPONLY`: set HTTP-only for the cookie language (default: False)
+- ``LANGUAGE_COOKIE_NAME``: name for the cookie language (default: ``'lang'``)
+- ``LANGUAGE_COOKIE_TIMEOUT``: validity duration of the cookie language (default: ``datetime.timedelta(days=365)``)
+- ``LANGUAGE_COOKIE_DOMAIN``: domain for the cookie language (default: ``None``)
+- ``LANGUAGE_COOKIE_SECURE``: set secure option for the cookie language (default: ``False``)
+- ``LANGUAGE_COOKIE_HTTPONLY``: set HTTP-only for the cookie language (default: ``False``)
 
 API
 ---
