@@ -1,0 +1,29 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+flask = "*"
+
+
+[dev-packages]
+
+coverage = "*"
+docutils = "*"
+"flake8" = "*"
+flask-sphinx-themes = "*"
+funcsigs = "*"
+pytest = "*"
+pytest-cov = "*"
+sphinx = "*"
+tox = "*"
+"e1839a8" = {path = ".", editable = true}
+
+
+[requires]
+
+python_version = "3.6"
